@@ -27,6 +27,7 @@
             return false;
         }
         function getdata(){
+            var gotJSON = false;
             wordcounts = {};
             countarr = [];
 
@@ -36,6 +37,8 @@
                         var info = result;
                         var tots = 0;
                         var totstop20 = 0;
+                        gotJSON = true;
+
                         for ( key in info) {
 
                             var bhct = 0;
@@ -105,4 +108,11 @@
                         return false;
                     });
 
+            setTimeout(function() {
+                if (!gotJSON)
+                {
+                    // Handle error accordingly
+                    alert("JSON data get timed out.");
+                }
+            }, 5000);
         }
