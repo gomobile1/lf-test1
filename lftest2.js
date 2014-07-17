@@ -1,12 +1,16 @@
 //    <script>
         var wordcounts = { };
         var countarr = [];
-        var ctr = 0;
-        /*
+//        var ctr = 0;
+
          $(document).ready(function(){
-         alert('doc ready');
+            alert('doc ready');
+            $('#getbutt1').bind('click', function(){
+            alert('getdata');
+                getdata();
+             });
          });
-         */
+
         function parseit( resp){
 
             var sarr = resp.toLowerCase().split(' ');
@@ -27,14 +31,15 @@
             }
             return false;
         }
-        function ajaxz(){
+//        function ajaxz(){
+        function getdata(){
             wordcounts = {};
             countarr = [];
 
-            var getlink = document.getElementById('downloadlink').value ;
-            var xx = getlink;
+ //           var getlink = document.getElementById('downloadlink').value ;
+ //           var xx = document.getElementById('downloadlink').value ;
 
-            $.getJSON(xx,
+            $.getJSON(document.getElementById('downloadlink').value,
                     function(result){
 
                         var info = result;
@@ -44,7 +49,7 @@
 
                             var bhct = 0;
                             if ( (info[key].length) && ( info[key].length >= 0 )) {
-                                for (var i = 0, l = info[key].length; i < l ; i++ ){
+                                for (i = 0, l = info[key].length; i < l ; i++ ){
                                     var infox =  info[key][i];
                                     for ( key1 in infox) {
                                         if ( key1 == "content") {
@@ -60,14 +65,14 @@
                             }
                         }
                         countarr.sort();
-                        for ( var i=0; i < countarr.length; i++) {
+                        for ( i=0; i < countarr.length; i++) {
                             document.getElementById('TABLEOFWORDSBYALPHA').innerHTML =
                                     document.getElementById('TABLEOFWORDSBYALPHA').innerHTML + '<li>'+ countarr[i][0] + ' ('+ countarr[i][1]  + ')</li>';
                         }
                         countarr.sort( function( a, b) {
                             return b[1] - a[1];
                         });
-                        for ( var i=0; i < countarr.length; i++) {
+                        for ( i=0; i < countarr.length; i++) {
                             document.getElementById('TABLEOFWORDSBYCOUNT').innerHTML =
                                     document.getElementById('TABLEOFWORDSBYCOUNT').innerHTML + '<li>'+ countarr[i][0] + ' ('+ countarr[i][1]  + ')</li>';
                         }
@@ -87,8 +92,8 @@
                                     data: []
                                 }
                             ]
-                        }
-                        for ( var i=0; i < countarr.length; i++) {
+                        };
+                        for ( i=0; i < countarr.length; i++) {
                             if ( i < 20 ){
                                 data['labels'][i] = countarr[i][0] + " (" + countarr[i][1] + ")";
                                 data['datasets'][0]['data'][i] = countarr[i][1];

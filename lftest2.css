@@ -1,27 +1,25 @@
-    <style>
-        .txta {
-            width: 50%;
-            height: 4em;
-        }
-        .mychart {
-            background-color: orange;
-            height: 200px;
-            width: 800px;
-        }
+<style>
+    .txta {
+        width: 50%;
+        height: 4em;
+    }
+    .mychart {
+        background-color: orange;
+        height: 200px;
+        width: 800px;
+    }
 
-        .tableft {
-            width: 40%;
-            float: left;
-            display: inline-block;
-            background-color: #aaa;
-            list-style-type: decimal;
-        }
-        .tabright {
-            width: 40%;
-            float: left;
-            display: inline-block;
-            background-color: #bbb;
-            list-style-type: decimal;
-        }
-
-    </style>
+    .tableft {
+        width: 40%;
+        float: left;
+        display: inline-block;
+        background-color: #aaa;
+        list-style-type: decimal;
+    }
+    .tabright {
+        width: 40%;
+        float: left;
+        display: inline-block;
+        background-color: #bbb;
+        list-style-type: decimal;
+    }

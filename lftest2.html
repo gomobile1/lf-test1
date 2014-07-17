@@ -2,13 +2,10 @@
 <html lang="en">
 
 <head>
-    <link href="http://www.gomobilesoft.com/lftest2.css" rel="stylesheet" type="text/css">
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
-    <script src="//www.gomobilesoft.com/lftest2.js"></script>
-
-
+<link href="http://www.gomobilesoft.com/lftest2.css" rel="stylesheet" type="text/css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+<script src="//www.gomobilesoft.com/lftest2.js"></script>
 </head>
 
 <body>
@@ -17,24 +14,20 @@
 <label>Link to download from:</label><br/>
 <textarea id='downloadlink' class='txta'>http://bootstrap.strategy-prod.fyre.co/bs3/strategy-prod.fyre.co/340628/Y3VzdG9tLTEzODM1ODgwNTYyMzg=/2685.json
 </textarea>
-
 <br/>
-<button onclick="ajaxz('xxx');">
-    Download JSON and Count Words
+<button id="getbutt1">
+Download JSON and Count Words
 </button>
 <br/>
 <label id="chart1label"></label>
 <canvas id="myChart" class="mychart" ></canvas>
-
 <div id='GOTSTUFF' style='display: none'>
 </div>
-
 <ul id='TABLEOFWORDSBYALPHA' class='tableft'>
 Words listed Alphabetically
 </ul>
 <ul id='TABLEOFWORDSBYCOUNT' class='tabright'>
 Words listed by number of times used
 </ul>
-
 </body>
 </html>
