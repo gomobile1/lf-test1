@@ -1,18 +1,13 @@
-//    <script>
         var wordcounts = { };
         var countarr = [];
-//        var ctr = 0;
-
          $(document).ready(function(){
-            alert('doc ready');
+//            alert('doc ready');
             $('#getbutt1').bind('click', function(){
-            alert('getdata');
                 getdata();
              });
          });
 
         function parseit( resp){
-
             var sarr = resp.toLowerCase().split(' ');
 
             for ( var ii = 0, ll = sarr.length; ii < ll; ii++ ){
@@ -31,13 +26,9 @@
             }
             return false;
         }
-//        function ajaxz(){
         function getdata(){
             wordcounts = {};
             countarr = [];
-
- //           var getlink = document.getElementById('downloadlink').value ;
- //           var xx = document.getElementById('downloadlink').value ;
 
             $.getJSON(document.getElementById('downloadlink').value,
                     function(result){
@@ -115,5 +106,3 @@
                     });
 
         }
-
-//    </script>
